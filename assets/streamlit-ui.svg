@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#f8fafc" />
+  <rect x="60" y="50" width="1080" height="600" rx="24" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="80" y="80" width="980" height="120" rx="16" fill="#0ea5e9" />
+  <text x="100" y="130" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700">Resume Screener Streamlit UI</text>
+  <rect x="100" y="220" width="320" height="110" rx="14" fill="#e2e8f0" />
+  <text x="120" y="260" fill="#0f172a" font-family="Arial, sans-serif" font-size="22">Upload PDF resumes</text>
+  <rect x="440" y="220" width="320" height="110" rx="14" fill="#e2e8f0" />
+  <text x="460" y="260" fill="#0f172a" font-family="Arial, sans-serif" font-size="22">Enter job description</text>
+  <rect x="780" y="220" width="320" height="110" rx="14" fill="#e2e8f0" />
+  <text x="800" y="260" fill="#0f172a" font-family="Arial, sans-serif" font-size="22">Generate rankings</text>
+  <rect x="100" y="360" width="1000" height="230" rx="18" fill="#fff" stroke="#cbd5e1" stroke-width="1"/>
+  <text x="120" y="400" fill="#0f172a" font-family="Arial, sans-serif" font-size="22">Candidate summary cards</text>
+  <line x1="100" y1="440" x2="1100" y2="440" stroke="#e2e8f0" stroke-width="2"/>
+  <rect x="120" y="460" width="340" height="95" rx="12" fill="#f1f5f9" />
+  <rect x="500" y="460" width="340" height="95" rx="12" fill="#f1f5f9" />
+  <rect x="880" y="460" width="180" height="95" rx="12" fill="#f1f5f9" />
+  <text x="140" y="500" fill="#334155" font-family="Arial, sans-serif" font-size="18">Resume 1</text>
+  <text x="520" y="500" fill="#334155" font-family="Arial, sans-serif" font-size="18">Resume 2</text>
+  <text x="900" y="500" fill="#334155" font-family="Arial, sans-serif" font-size="18">Scores</text>
+</svg>

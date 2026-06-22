@@ -1,0 +1,37 @@
+# ── Core ──────────────────────────────────────────────────────────────────────
+streamlit>=1.35.0
+python-dotenv>=1.0.0
+
+# ── PDF parsing ────────────────────────────────────────────────────────────────
+PyMuPDF>=1.24.0
+
+# ── Embeddings ─────────────────────────────────────────────────────────────────
+numpy>=1.26.0
+sentence-transformers>=2.7.0        # HuggingFace backend
+torchvision                         # Required by transformers/streamlit watcher
+requests>=2.31.0                    # Ollama backend
+
+# ── ML / similarity ────────────────────────────────────────────────────────────
+scikit-learn>=1.4.0
+faiss-cpu>=1.8.0
+
+# ── LLM orchestration ──────────────────────────────────────────────────────────
+langchain>=0.2.0
+langchain-groq>=0.1.6
+langchain-ollama>=0.1.1
+langchain-openai>=0.1.8
+langgraph>=0.1.14
+pydantic>=2.7.0
+
+# ── NLP / skill extraction ─────────────────────────────────────────────────────
+rapidfuzz>=3.9.0
+
+# ── Charts / visualization ─────────────────────────────────────────────────────
+plotly>=5.18.0
+
+# ── Report generation ──────────────────────────────────────────────────────────
+fpdf2>=2.7.9
+
+# ── Utilities ──────────────────────────────────────────────────────────────────
+typing_extensions>=4.11.0
+

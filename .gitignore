@@ -1,0 +1,134 @@
+# ======================
+# Python
+# ======================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+*.pyo
+*.pyd
+
+# ======================
+# Virtual Environments
+# ======================
+venv/
+env/
+ENV/
+.venv/
+.env/
+virtualenv/
+
+# ======================
+# Environment Variables
+# ======================
+.env
+.env.local
+.env.*.local
+*.env
+
+# ======================
+# Streamlit
+# ======================
+.streamlit/secrets.toml
+
+# ======================
+# AI / ML Artifacts
+# ======================
+# FAISS indexes (can be large, regenerate from source)
+vectorstore/index/
+*.faiss
+*.index
+*.pkl
+
+# Embedding caches
+embeddings_cache/
+.cache/
+*.npy
+
+# Model weights (too large for git)
+models/
+*.bin
+*.pt
+*.pth
+*.onnx
+*.safetensors
+
+# ======================
+# Uploaded Files (runtime)
+# ======================
+uploads/
+tmp/
+temp/
+*.pdf
+
+# ======================
+# Logs
+# ======================
+logs/
+*.log
+log/
+
+# ======================
+# Testing & Coverage
+# ======================
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+.nox/
+nosetests.xml
+pytest.ini
+test-results/
+
+# ======================
+# Type Checking
+# ======================
+.mypy_cache/
+.pytype/
+.pyre/
+
+# ======================
+# IDE & Editor
+# ======================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ======================
+# Jupyter Notebooks
+# ======================
+.ipynb_checkpoints/
+*.ipynb
+
+# ======================
+# Documentation artifacts
+# (Keep .md source, ignore generated HTML/PDF builds)
+# ======================
+docs/_build/
+site/
+
+# ======================
+# Unnecessary Project Docs
+# (AI-generated planning files, not needed in repo)
+# ======================
+START_HERE.md
+ROADMAP_VISUAL.md
+QUICK_START_IMPROVEMENTS.md
+IMPROVEMENT_GUIDE.md

@@ -1,0 +1,16 @@
+[run]
+omit =
+    # Requires live LLM API key — covered by integration tests only
+    agents/recruiter_agent.py
+    # Requires fpdf2 rendering — covered by integration tests only
+    utils/report.py
+    # Test files themselves
+    tests/*
+    venv/*
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    raise NotImplementedError
+    if TYPE_CHECKING:
