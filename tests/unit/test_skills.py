@@ -4,8 +4,6 @@ tests/unit/test_skills.py — Unit tests for utils/skills.py
 
 from __future__ import annotations
 
-import pytest
-
 
 class TestExtractSkills:
     def test_extracts_python(self):

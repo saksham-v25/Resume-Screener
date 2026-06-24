@@ -5,8 +5,6 @@ tests/unit/test_parser.py — Unit tests for utils/parser.py
 from __future__ import annotations
 
 import io
-import pytest
-
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -58,8 +56,9 @@ class TestParseResume:
         assert result["parse_error"] is not None
 
     def test_multipage_pdf(self):
-        from utils.parser import parse_resume
         import fitz
+
+        from utils.parser import parse_resume
         doc = fitz.open()
         for i in range(3):
             page = doc.new_page()

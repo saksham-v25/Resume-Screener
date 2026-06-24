@@ -15,13 +15,11 @@ from __future__ import annotations
 
 import io
 import os
-import time
 import traceback
-from typing import Any
 
 import streamlit as st
 
-from config import setup_logging, get_logger, settings
+from config import get_logger, settings, setup_logging
 
 # ── Logging ───────────────────────────────────────────────────────────────────
 setup_logging(
@@ -32,8 +30,9 @@ setup_logging(
 logger = get_logger(__name__)
 
 # ── Startup services (telemetry + persistence) ────────────────────────────────
-from utils.telemetry import init_telemetry_db, track_event  # noqa: E402
 from utils.database import init_db  # noqa: E402
+from utils.telemetry import init_telemetry_db, track_event  # noqa: E402
+
 init_telemetry_db()
 init_db()
 
@@ -381,7 +380,8 @@ with tabs[3]:
     st.header("🔍 Semantic Search")
     st.caption("Find candidates using natural language — e.g. 'Python developer with NLP experience'")
 
-    from vectorstore.store import index_is_built, search as faiss_search
+    from vectorstore.store import index_is_built
+    from vectorstore.store import search as faiss_search
 
     if not index_is_built():
         st.info("Run analysis first to build the search index.")

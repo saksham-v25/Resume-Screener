@@ -4,9 +4,10 @@ tests/unit/test_store.py — Unit tests for vectorstore/store.py
 
 from __future__ import annotations
 
+from unittest.mock import patch
+
 import numpy as np
 import pytest
-from unittest.mock import patch
 
 
 def _mock_embed(text: str) -> np.ndarray:

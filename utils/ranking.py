@@ -13,7 +13,6 @@ from __future__ import annotations
 import time
 from typing import TypedDict
 
-import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 
 from config import get_logger
@@ -81,7 +80,7 @@ def rank_candidates(
             except Exception:
                 resume_vecs.append(None)  # type: ignore[arg-type]
 
-    for resume, rv in zip(valid_resumes, resume_vecs):
+    for resume, rv in zip(valid_resumes, resume_vecs, strict=False):
         if rv is None:
             results.append(
                 RankedCandidate(

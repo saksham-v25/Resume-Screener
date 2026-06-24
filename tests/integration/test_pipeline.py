@@ -6,9 +6,7 @@ These tests mock LLM calls but exercise the full LangGraph graph execution.
 
 from __future__ import annotations
 
-import pytest
-from unittest.mock import patch, MagicMock
-
+from unittest.mock import MagicMock, patch
 
 SAMPLE_JD = """
 We are looking for a Senior Python Developer with experience in:

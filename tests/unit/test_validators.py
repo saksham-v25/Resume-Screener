@@ -8,7 +8,6 @@ from pydantic import ValidationError
 
 from utils.validators import JobDescriptionInput, ResumeInput, validate_jd, validate_resume
 
-
 # ── JobDescriptionInput ───────────────────────────────────────────────────────
 
 

@@ -3,7 +3,6 @@ tests/unit/test_database.py — Unit tests for utils/database.py
 """
 from __future__ import annotations
 
-import json
 import sqlite3
 
 import pytest
@@ -72,7 +71,7 @@ def test_save_analysis_returns_id(analysis_db):
 
 def test_save_analysis_persists_candidates(analysis_db):
     """Saved candidates are retrievable and correct."""
-    from utils.database import save_analysis, get_candidates_by_analysis_id
+    from utils.database import get_candidates_by_analysis_id, save_analysis
 
     aid = save_analysis(SAMPLE_JD, SAMPLE_CANDIDATES)
     candidates = get_candidates_by_analysis_id(aid)
@@ -85,7 +84,7 @@ def test_save_analysis_persists_candidates(analysis_db):
 
 def test_candidates_sorted_by_score_desc(analysis_db):
     """Candidates should be returned highest score first."""
-    from utils.database import save_analysis, get_candidates_by_analysis_id
+    from utils.database import get_candidates_by_analysis_id, save_analysis
 
     aid = save_analysis(SAMPLE_JD, SAMPLE_CANDIDATES)
     candidates = get_candidates_by_analysis_id(aid)
@@ -96,7 +95,7 @@ def test_candidates_sorted_by_score_desc(analysis_db):
 
 def test_get_analysis_history(analysis_db):
     """get_analysis_history() should return saved analyses."""
-    from utils.database import save_analysis, get_analysis_history
+    from utils.database import get_analysis_history, save_analysis
 
     save_analysis(SAMPLE_JD, SAMPLE_CANDIDATES)
     save_analysis("Another JD text for second analysis run.", SAMPLE_CANDIDATES[:1])
@@ -109,7 +108,7 @@ def test_get_analysis_history(analysis_db):
 
 def test_matched_skills_deserialized(analysis_db):
     """matched_skills should come back as a Python list, not a JSON string."""
-    from utils.database import save_analysis, get_candidates_by_analysis_id
+    from utils.database import get_candidates_by_analysis_id, save_analysis
 
     aid = save_analysis(SAMPLE_JD, SAMPLE_CANDIDATES)
     candidates = get_candidates_by_analysis_id(aid)

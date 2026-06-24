@@ -4,10 +4,6 @@ tests/unit/test_cache.py — Unit tests for utils/cache.py
 from __future__ import annotations
 
 import pickle
-from pathlib import Path
-
-import pytest
-
 
 # ── Fixtures ──────────────────────────────────────────────────────────────────
 

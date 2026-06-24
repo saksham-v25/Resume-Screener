@@ -150,7 +150,7 @@ def search(query: str, top_k: int = 5) -> list[dict]:
         scores, indices = _index.search(qvec, k)
 
         results = []
-        for score, idx in zip(scores[0], indices[0]):
+        for score, idx in zip(scores[0], indices[0], strict=False):
             if idx < 0:
                 continue
             candidate = dict(_metadata[idx])

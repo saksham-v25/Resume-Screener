@@ -62,7 +62,7 @@ def test_track_event_multiple(telemetry_db):
 
 def test_get_recent_events(telemetry_db):
     """get_recent_events() returns dicts with expected keys."""
-    from utils.telemetry import track_event, get_recent_events
+    from utils.telemetry import get_recent_events, track_event
 
     track_event("ranking", {"candidate_count": 3}, duration_ms=123.0)
     events = get_recent_events(limit=5)

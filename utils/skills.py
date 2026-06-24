@@ -16,7 +16,6 @@ from __future__ import annotations
 
 import json
 import re
-from functools import lru_cache
 from pathlib import Path
 from typing import NamedTuple
 
@@ -37,7 +36,7 @@ def _load_skill_db() -> list[tuple[str, list[str]]]:
     """
     path: Path = settings.skill.db_path
     try:
-        with open(path, "r", encoding="utf-8") as f:
+        with open(path, encoding="utf-8") as f:
             data = json.load(f)
         skills = [
             (entry["name"], entry.get("aliases", []))
@@ -70,7 +69,7 @@ for canonical, aliases in SKILL_DB:
         _CANONICAL[alias.lower()] = canonical
 
 # Pre-built alias lookup: canonical_name -> list[str aliases]
-_ALIASES: dict[str, list[str]] = {canonical: aliases for canonical, aliases in SKILL_DB}
+_ALIASES: dict[str, list[str]] = dict(SKILL_DB)
 
 
 # ── Return type ───────────────────────────────────────────────────────────────
@@ -137,8 +136,9 @@ def _embedding_match(skill: str, text: str) -> bool:
     if not settings.skill.use_embeddings:
         return False
     try:
-        from utils.embeddings import embed_text
         import numpy as np
+
+        from utils.embeddings import embed_text
 
         sv = embed_text(skill)
         tv = embed_text(text[:2000])  # limit cost

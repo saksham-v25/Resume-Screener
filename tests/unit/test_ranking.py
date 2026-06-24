@@ -4,9 +4,10 @@ tests/unit/test_ranking.py — Unit tests for utils/ranking.py
 
 from __future__ import annotations
 
+from unittest.mock import patch
+
 import numpy as np
 import pytest
-from unittest.mock import patch, MagicMock
 
 
 def _make_resume(name: str, filename: str, text: str, error: str | None = None):
